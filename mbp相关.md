@@ -1,0 +1,2 @@
+ - iterm，在连接服务器时会自定义编码导致与服务器不同出现乱码
+    - 解决方案 Preferences=>Profiles=>Terminal=>Environment 去掉自动配置环境变量
