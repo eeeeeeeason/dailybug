@@ -29,3 +29,6 @@
   1.一张分区表插入到另一张分区表的时候不要带上分区字段
   2.有分区字段的表在插入的时候要加入partition字段
   ```
+- hivesql
+  - 当存在多个分区时distribute by 与order by 不能同用，order by需要更换为sort by；
+  - 子表查询需要
