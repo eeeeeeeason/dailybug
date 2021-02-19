@@ -32,3 +32,8 @@
 - hivesql
   - 当存在多个分区时distribute by 与order by 不能同用，order by需要更换为sort by；
   - 子表查询需要
+
+```
+javax.jdo.JDOFatalInternalException: Error creating transactional connection factory
+```
+- mysql connector没有或者hive-site.xml配置有缺陷
