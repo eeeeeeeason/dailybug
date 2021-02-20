@@ -37,3 +37,10 @@
 javax.jdo.JDOFatalInternalException: Error creating transactional connection factory
 ```
 - mysql connector没有或者hive-site.xml配置有缺陷
+```
+OutOfMemoryError: Java heap space
+Mapreduce时直接Error
+```
+- 1.将系统设置的set mapred.max.split.size = 300000000;我们原先的最大分片设置成200000000.降低切片大小，这样的坏处是会产生更多的map去执行。
+- 2.将上面集群的heap.size设置的更大些，比如2048（2g）
+
