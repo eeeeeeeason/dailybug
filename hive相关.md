@@ -51,3 +51,7 @@ Error while processing statement: FAILED: Execution Error, return code 137 from 
 - 解决方案: 
   - 关闭掉mapjoin
   - set hive.auto.convert.join= false;
+```
+Could not connect to hadoop02:10000 (code THRIFTTRANSPORT): TTransportException('Could not connect to hadoop02:10000',)
+```
+- jvm堆栈不足在cm中的hive配置项搜索Java 堆栈调整到2GB内存
