@@ -44,3 +44,10 @@ Mapreduce时直接Error
 - 1.将系统设置的set mapred.max.split.size = 300000000;我们原先的最大分片设置成200000000.降低切片大小，这样的坏处是会产生更多的map去执行。
 - 2.将上面集群的heap.size设置的更大些，比如2048（2g）
 
+```
+Error while processing statement: FAILED: Execution Error, return code 137 from org.apache.hadoop.hive.ql.exec.mr.MapredLocalTask
+```
+- 错误的原因 :  在执行 多表join的操作, HIVE会优化尝试 mapjoin, 将小表的数据放置在内存中, 但是内存不足无法放置, 导致运行失败
+- 解决方案: 
+  - 关闭掉mapjoin
+  - set hive.auto.convert.join= false;
