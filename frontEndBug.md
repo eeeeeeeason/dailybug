@@ -1,0 +1,6 @@
+- vue-drag相关
+  - 理论周期为dragEnter,dragOver,dragLeave,drop,dragStart,dragEnd
+  - FIX:事件中常发生dragEnd后仍然再次触发dragEnter
+- html2canvas
+  - svg进行截图时元素会丢失。
+  - FIX:svg元素需要配置数值而不能用百分比配置宽高
