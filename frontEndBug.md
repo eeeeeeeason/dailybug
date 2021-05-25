@@ -1,6 +1,13 @@
 - vue-drag相关
   - 理论周期为dragEnter,dragOver,dragLeave,drop,dragStart,dragEnd
   - FIX:事件中常发生dragEnd后仍然再次触发dragEnter
+  - 兼容问题
+    - safari 12不支持svg中的def和use组合进行拖拽，只能拖拽单独的元素。配合polyfill-drag-n-drop处理dragEnter需要preventDefault和stopPropgation才能进入到dragOver
+    - 移动设备在删除原有元素后会导致移动的当前元素卡顿，应该在拖动时保留原本元素
+  - 性能问题
+    - 移动设备拖拽过程中冒泡到外部，导致外部也被拖拽，可以使用fix将外部元素的父级定位。
+    - preventdefault在ios设备似乎调用多次。思考处理方式
+    - 
 - html2canvas
   - svg进行截图时元素会丢失。
   - FIX:svg元素需要配置数值而不能用百分比配置宽高
