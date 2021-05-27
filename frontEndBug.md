@@ -12,3 +12,7 @@
 - html2canvas
   - svg进行截图时元素会丢失。
   - FIX:svg元素需要配置数值而不能用百分比配置宽高
+
+- 数组清洗相关
+  - 根据规则对数组进行splice后，索引并不会倒退。会导致最后的索引对应某个数据为空。
+  - 对于string类型数组 arr 转number类型 arr.map(number)
