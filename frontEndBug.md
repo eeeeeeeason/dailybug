@@ -18,3 +18,7 @@
   - 对于string类型数组 arr 转number类型 arr.map(number)
 - 业务上
   - event.once 触发后可以通过修改key重新激活
+- 适配安卓
+  - z-index inherit 在安卓设备上会导致层级与父级想同而不显示
+  - /deep/ scope的穿透在require的情况下google模拟器是不执行的。但是到了安卓设备会执行
+  - 调试的方法ngrok+ wetest
