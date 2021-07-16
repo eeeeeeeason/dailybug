@@ -8,7 +8,7 @@
     - 移动设备拖拽过程中冒泡到外部，导致外部也被拖拽，可以使用fix将外部元素的父级定位。
     - preventdefault在ios设备似乎调用多次。思考处理方式
   - 调试
-    - 移动设备调试过程过程中，safari对不上mac版本导致控制台空，无法处理啊，最后折中用了Spydebugger，需要配置代理和安装证书
+    - 移动设备调试过程过程中，safari对不上mac版本导致控制台空，无法处理啊，最后折中用了Spydebugger，需要配置代理和安装证书 https://github.com/wuchangming/spy-debugger
 - html2canvas
   - svg进行截图时元素会丢失。
   - FIX:svg元素需要配置数值而不能用百分比配置宽高
