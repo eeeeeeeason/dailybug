@@ -1,5 +1,7 @@
 - vue-drag相关
   - 理论周期为dragEnter,dragOver,dragLeave,drop,dragStart,dragEnd
+  - 拖拽时，cnot门卡顿问题
+    - 初期开发仅用单比特门发现拖拽并无异常。但用cnot门时竟然发生了卡顿。检查了第三方和逻辑错误的问题，均未发现异常。最后在仔细观察key时发现，由于我的key规则是以xy作为唯一标识，cnot门由于创建的临时节点导致临时节点覆盖了原本的真实节点触发update，拖拽又必须保证原有元素的存在。因此对key做了修正 
   - FIX:事件中常发生dragEnd后仍然再次触发dragEnter
   - 兼容问题
     - safari 12不支持svg中的def和use组合进行拖拽，只能拖拽单独的元素。配合polyfill-drag-n-drop处理dragEnter需要preventDefault和stopPropgation才能进入到dragOver
