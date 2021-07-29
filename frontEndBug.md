@@ -18,6 +18,7 @@
 - 数组清洗相关
   - 根据规则对数组进行splice后，索引并不会倒退。会导致最后的索引对应某个数据为空。
   - 对于string类型数组 arr 转number类型 arr.map(number)
+  - isNaN(1.) 为false, 1. 会被认为1
 - 业务上
   - event.once 触发后可以通过修改key重新激活
 - 适配安卓
