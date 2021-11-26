@@ -29,4 +29,7 @@
   - 在ios设备中会有回弹的事件。非常影响拖拽实现，我们在拖拽时要禁用Body的addEventListener.touchevent,出了该界面再放开removeEventListener,需要注意的是只有在listener中使用外界命名函数才能有效移除
 - 结构问题
   - 产品希望项目的log日志能够足够清晰，项目经理任务清晰的errorlog会让其他人有了解结构的可能。最终分为了三部分问题：用户输入问题。数据处理问题。未知问题
-- 
+
+- typescript building问题
+  - 我在antlr4语法树中通过constructor.name判断了上下文，然而这个name会在build过程中被uglify，这个问题导致打包后判断失败，我最后在.g4生成的parser中补充了该类的static name
+  - new Array().fill(这里不能添加引用，如new Array)会导致引用同一个数组的二维数组产生
