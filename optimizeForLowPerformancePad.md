@@ -5,3 +5,4 @@
 - 滚动时花屏qt中的webengine十分卡顿，当前认为是内核的优化问题，还没找到办法，
   - https://segmentfault.com/a/1190000040853792
   - https://github.com/escawn/blog/issues/5
+  - https://blog.csdn.net/A3872215/article/details/98853306    qt远程连接
