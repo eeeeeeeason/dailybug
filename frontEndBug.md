@@ -19,6 +19,7 @@
   - 根据规则对数组进行splice后，索引并不会倒退。会导致最后的索引对应某个数据为空。
   - 对于string类型数组 arr 转number类型 arr.map(number)
   - isNaN(1.) 为false, 1. 会被认为1
+  - 在计算数学运算时简单使用了isNaN后取值运算但没想到 "080"是八进制导致报错SyntaxError: Octal literals are not allowed in strict mode.
 - 业务上
   - event.once 触发后可以通过修改key重新激活
 - 适配安卓
