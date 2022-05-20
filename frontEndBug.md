@@ -34,3 +34,4 @@
 - typescript building问题
   - 我在antlr4语法树中通过constructor.name判断了上下文，然而这个name会在build过程中被uglify，这个问题导致打包后判断失败，我最后在.g4生成的parser中补充了该类的static name
   - new Array().fill(这里不能添加引用，如new Array)会导致引用同一个数组的二维数组产生
+- reg 零宽断言正则在ios设备不兼容 ?<=exp 这类型需要慎重使用
